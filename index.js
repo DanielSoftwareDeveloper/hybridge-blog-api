@@ -24,6 +24,16 @@ sequelize
   .then(() => console.log("Conectado a la DB"))
   .catch((err) => console.error("No se pudo conectar a la DB:", err));
 
+// Ruta de salud para confirmar que la API está activa
+app.get("/", (req, res) => {
+  res.json({
+    message: "Hybridge Blog API está activa ✅",
+    author: "Daniel Reyes",
+    endpoints:
+      "/api/signup, /api/login, /api/profile, /api/authors, /api/posts",
+  });
+});
+
 /* ------------------------------------------
    1. ESTRATEGIA LOCAL (LOGIN)
 ------------------------------------------- */
