@@ -27,7 +27,7 @@ sequelize
 // Ruta de salud para confirmar que la API está activa
 app.get("/", (req, res) => {
   res.json({
-    message: "Hybridge Blog API está activa ✅",
+    message: "Hybridge Blog API",
     author: "Daniel Reyes",
     endpoints:
       "/api/signup, /api/login, /api/profile, /api/authors, /api/posts",
